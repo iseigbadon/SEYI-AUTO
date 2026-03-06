@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEYI AUTO - Automobiles de Luxe Premium | Abuja, Nigeria</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="lang-btn" onclick="window.location.href='index.html'">EN</button>
+        <button class="lang-btn" onclick="window.location.href='index-es.html'">ES</button>
+        <button class="lang-btn active" onclick="switchLanguage('fr')">FR</button>
+        <button class="lang-btn" onclick="window.location.href='index-yo.html'">YO</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <img src="images/logo.png" alt="SEYI AUTO" class="logo">
+            </div>
+            <div class="nav-links">
+                <a href="#brands" class="nav-link">Marques</a>
+                <a href="#gallery" class="nav-link">Galerie</a>
+                <a href="#inventory" class="nav-link">Inventaire</a>
+                <a href="#contact" class="nav-link cta-btn">Réserver</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero with Background Video -->
+    <section class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="https://media.istockphoto.com/id/1173378118/video/luxury-car-speeding-on-a-modern-highway.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>SEYI AUTO</h1>
+            <p class="hero-subtitle">Automobiles Premium. Excellence Curatée.</p>
+            <p class="hero-desc">Le luxe redéfini pour l'élite d'Abuja. Explorez Tesla, Mercedes-Benz, Toyota et bien d'autres.</p>
+            <button class="btn-primary" onclick="scrollToSection('inventory')">Explorez l'Inventaire</button>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands" id="brands">
+        <div class="section-header">
+            <h2>Nos Collections</h2>
+            <p>Les meilleures marques de luxe du monde entier</p>
+        </div>
+        <div class="brands-grid">
+            <div class="brand-card" onclick="filterInventory('tesla')">
+                <div class="brand-img">T</div>
+                <h3>Tesla</h3>
+                <p>Performance Électrique</p>
+            </div>
+            <div class="brand-card" onclick="filterInventory('mercedes')">
+                <div class="brand-img">M</div>
+                <h3>Mercedes-Benz</h3>
+                <p>Ingénierie Allemande</p>
+            </div>
+            <div class="brand-card" onclick="filterInventory('bmw')">
+                <div class="brand-img">B</div>
+                <h3>BMW</h3>
+                <p>Luxe et Performance</p>
+            </div>
+            <div class="brand-card" onclick="filterInventory('toyota')">
+                <div class="brand-img">TY</div>
+                <h3>Toyota</h3>
+                <p>Fiabilité et Prestige</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inventory Section -->
+    <section class="inventory" id="inventory">
+        <div class="section-header">
+            <h2>Inventaire Actuel</h2>
+            <p>Véhicules premium disponibles pour achat immédiat ou essai routier</p>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="category-filter">
+            <button class="category-btn active" onclick="filterByCategory('all')">Tous les Véhicules</button>
+            <button class="category-btn" onclick="filterByCategory('sedan')">Berlines</button>
+            <button class="category-btn" onclick="filterByCategory('suv')">SUVs</button>
+            <button class="category-btn" onclick="filterByCategory('hypercar')">Hypervoitures</button>
+            <button class="category-btn" onclick="filterByCategory('truck')">Camions</button>
+        </div>
+
+        <div class="inventory-grid" id="inventoryGrid">
+            <!-- Dynamically populated -->
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="section-header">
+            <h2>Galerie</h2>
+            <p>Vitrine visuelle de notre collection premium</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="gallery-img img-1"></div>
+                <h4>Tesla Model S</h4>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-img img-2"></div>
+                <h4>Mercedes-AMG</h4>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-img img-3"></div>
+                <h4>BMW M Series</h4>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-img img-4"></div>
+                <h4>Toyota Land Cruiser</h4>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-img img-5"></div>
+                <h4>Porsche 911</h4>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-img img-6"></div>
+                <h4>SUV Luxe</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <div class="section-header">
+            <h2>Pourquoi SEYI AUTO</h2>
+            <p>Expérience du luxe redéfini</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Inventaire Authentique</h3>
+                <p>Chaque véhicule est certifié et minutieusement inspecté pour assurer la qualité.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Financement Flexible</h3>
+                <p>Taux compétitifs et plans de paiement adaptés à vos besoins.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Expérience Premium</h3>
+                <p>Service blanc gant et support dédié pour chaque client.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Service Après-Vente</h3>
+                <p>Paquets de garantie et d'entretien complets disponibles.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Booking -->
+    <section class="contact" id="contact">
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h2>Réservez Votre Véhicule</h2>
+                <p>Contactez notre équipe commerciale</p>
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <span class="label">Téléphone</span>
+                        <a href="tel:08168890294" class="detail-value">08168890294</a>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Localisation</span>
+                        <p class="detail-value">Abuja, Nigeria</p>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Horaires</span>
+                        <p class="detail-value">Lun - Sam: 9AM - 8PM</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Nom Complet" required>
+                <input type="email" placeholder="Adresse Email" required>
+                <input type="tel" placeholder="Numéro de Téléphone" required>
+                <select required>
+                    <option value="">Sélectionnez Véhicule d'Intérêt</option>
+                    <option value="tesla">Tesla</option>
+                    <option value="mercedes">Mercedes-Benz</option>
+                    <option value="bmw">BMW</option>
+                    <option value="toyota">Toyota</option>
+                </select>
+                <textarea placeholder="Message..." rows="5"></textarea>
+                <button type="submit" class="btn-primary">Envoyer Demande</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>SEYI AUTO</h4>
+                <p>Véhicules de luxe premium à Abuja, Nigeria</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens Rapides</h4>
+                <a href="#brands">Marques</a>
+                <a href="#gallery">Galerie</a>
+                <a href="#inventory">Inventaire</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Téléphone: 08168890294</p>
+                <p>Localisation: Abuja, Nigeria</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SEYI AUTO. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
